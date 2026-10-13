@@ -67,13 +67,14 @@ fun Login() {
     ) { innerPadding ->
 
         Column(
-            verticalArrangement = Arrangement.Center,
+            verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
                 .padding(innerPadding)
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
-                .padding(horizontal = 15.dp, vertical = 20.dp)
+                .padding(horizontal = 15.dp)
+                .padding(top = 30.dp)
         ) {
 
             // LOGO DE DESCORCHA
@@ -94,7 +95,7 @@ fun Login() {
                 color = Color(0xFF4A1021)
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(15.dp))
 
             // TEXTO DE BIENVENIDA
             Text(
@@ -103,7 +104,7 @@ fun Login() {
                 color = Color(0xFF80666A)
             )
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(30.dp))
 
             // CAMPO DE USUARIO
             TextField(
@@ -111,9 +112,9 @@ fun Login() {
                 onValueChange = {},
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 10.dp)
+                    .padding(horizontal = 20.dp)
                     .height(65.dp),
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(10.dp),
                 colors = TextFieldDefaults.colors(
                     focusedIndicatorColor = Color(0xFF4A1021),
                     unfocusedIndicatorColor = Color(0xFFD8C7C4),
@@ -139,7 +140,7 @@ fun Login() {
                 }
             )
 
-            Spacer(modifier = Modifier.height(15.dp))
+            Spacer(modifier = Modifier.height(30.dp))
 
             // CAMPO DE CONTRASEÑA
             TextField(
@@ -147,7 +148,7 @@ fun Login() {
                 onValueChange = {},
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 10.dp)
+                    .padding(horizontal = 20.dp)
                     .height(65.dp),
                 shape = RoundedCornerShape(16.dp),
                 visualTransformation = PasswordVisualTransformation(),
@@ -176,7 +177,7 @@ fun Login() {
                 }
             )
 
-            Spacer(modifier = Modifier.height(25.dp))
+            Spacer(modifier = Modifier.height(35.dp))
 
             // BOTONES LIMPIAR Y ACEPTAR
             Row(
@@ -196,7 +197,7 @@ fun Login() {
                     Text("Limpiar")
                 }
 
-                Spacer(modifier = Modifier.width(15.dp))
+                Spacer(modifier = Modifier.width(25.dp))
 
                 // BOTON ACEPTAR
                 Button(
